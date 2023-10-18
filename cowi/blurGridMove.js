@@ -12,8 +12,8 @@ function draw() {
     let mouseYPercent = mouseY / height;
 
     // Set the new position of the SVG circle
-    let newCX = map(mouseXPercent, 0, 1, 600, 1200);
-    let newCY = map(mouseYPercent, 0, 1, 600, 1200);
+    let newCX = map(mouseXPercent, 0, 1, 800, 1200);
+    let newCY = map(mouseYPercent, 0, 1, 700, 900);
     svg.querySelector('circle').setAttribute('cx', newCX);
     svg.querySelector('circle').setAttribute('cy', newCY);
 }

@@ -10,8 +10,8 @@ body {
 }
 
 .grid-square {
-  background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(65px);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(66px);
   z-index: 10;
   height: 5vh;
   width: 5vw;
