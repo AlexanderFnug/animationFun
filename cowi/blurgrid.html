@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="blur-grid.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blur Grid</title>
+  </head>
+  <body>
+    <div class="grid">
+      
+    </div>
+
+    <svg
+      width="1888"
+      height="1888"
+      viewBox="0 0 1888 1888"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g filter="url(#filter0_f_1093_3828)">
+        <circle
+          cx="944"
+          cy="944"
+          r="700"
+          fill="url(#paint0_linear_1093_3828)"
+        />
+      </g>
+      <defs>
+        <filter
+          id="filter0_f_1093_3828"
+          x="0"
+          y="0"
+          width="1888"
+          height="1888"
+          filterUnits="userSpaceOnUse"
+          color-interpolation-filters="sRGB"
+        >
+          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="BackgroundImageFix"
+            result="shape"
+          />
+          <feGaussianBlur
+            stdDeviation="122"
+            result="effect1_foregroundBlur_1093_3828"
+          />
+        </filter>
+        <linearGradient
+          id="paint0_linear_1093_3828"
+          x1="944"
+          y1="244"
+          x2="944"
+          y2="1644"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0.229167" stop-color="#FFFCA9" />
+          <stop offset="1" stop-color="#18B08A" />
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <!-- Add the script tag for p5.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <!-- Add the script tag for your p5.js sketch -->
+    <script src="blurGrid.js"></script>
+  </body>
+</html>

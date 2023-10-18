@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+}
+.grid {
+position: absolute;
+   display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+      
+}
+
+.grid-square {
+    background: rgba(255, 255, 255, 0.02);
+
+backdrop-filter: blur(65px);
+    z-index: 10;
+    height: 5vh;
+    width: 5vw;
+}
+svg {
+    
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    /* transform-origin: center center;
+    animation: squeeze 3s ease-in-out infinite;
+    animation-timing-function: ease-in-out;
+-webkit-animation-timing-function: ease-in-out; */
+}
