@@ -8,21 +8,29 @@
   </head>
   <body>
     <div class="grid">
-      
+      <script>
+        const grid = document.querySelector(".grid");
+        // Create 400 divs to create a 20x20 grid
+        for (let i = 0; i < 400; i++) {
+          const div = document.createElement("div");
+          div.classList.add("grid-square");
+          grid.appendChild(div);
+        }
+      </script>
     </div>
 
     <svg
-      width="1888"
-      height="1888"
-      viewBox="0 0 1888 1888"
+      width="1200"
+      height="1200"
+      viewBox="0 0 1200 1200"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g filter="url(#filter0_f_1093_3828)">
         <circle
-          cx="944"
-          cy="944"
-          r="700"
+          cx="500"
+          cy="500"
+          r="400"
           fill="url(#paint0_linear_1093_3828)"
         />
       </g>
@@ -31,8 +39,8 @@
           id="filter0_f_1093_3828"
           x="0"
           y="0"
-          width="1888"
-          height="1888"
+          width="1200"
+          height="1200"
           filterUnits="userSpaceOnUse"
           color-interpolation-filters="sRGB"
         >
@@ -50,10 +58,10 @@
         </filter>
         <linearGradient
           id="paint0_linear_1093_3828"
-          x1="944"
+          x1="500"
           y1="244"
-          x2="944"
-          y2="1644"
+          x2="500"
+          y2="1200"
           gradientUnits="userSpaceOnUse"
         >
           <stop offset="0.229167" stop-color="#FFFCA9" />
