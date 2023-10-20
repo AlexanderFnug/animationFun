@@ -2,7 +2,7 @@ const sketch = new p5((p) => {
     let width = p.windowWidth; // Get window width
     let height = p.windowHeight; // Get window height
     const balls = [];
-    const sphereRadius = 100;
+    const sphereRadius = 150;
     const spinTime = 500; // Time in milliseconds to start spinning
     let lastSpinTime = 0; // Last time a ball started spinning
     let spinSpeed = 0.01; // Speed of the spin
@@ -27,8 +27,8 @@ const sketch = new p5((p) => {
 
     // p5 mouseClicked function
     p.mouseClicked = () => {
-        const numBalls = 20;
-        const radius = 200;
+        const numBalls = 35;
+        const radius = 300;
         const center = p.createVector(p.mouseX, p.mouseY);
         for (let i = 0; i < numBalls; i++) {
             const angle = p.map(i, 0, numBalls, 0, p.TWO_PI);
@@ -44,14 +44,14 @@ const sketch = new p5((p) => {
         constructor(p, pos) {
           this.pos = pos || p.createVector(p.random(p.width), p.random(p.height));
           const angle = p.random(p.TWO_PI); // Random angle between 0 and 2*PI
-          this.vel = p5.Vector.fromAngle(angle).mult(p.random(0.3, 1)); // Create a vector from the angle
+          this.vel = p5.Vector.fromAngle(angle).mult(p.random(1, 5)); // Create a vector from the angle
           this.size = p.random(0.5, 5);
           this.isSpinning = false; // Whether the ball is currently spinning
           this.spinStartTime = 0; // Time when the ball started spinning
           this.spinRadius = 0; // Radius of the spinning circle
           this.spinCenter = p.createVector(p.mouseX, p.mouseY); // Center of the spinning circle
           this.spinAngle = 0; // Current angle of the ball on the spinning circle
-          this.spinSpeed = p.random(0.01, 0.05); // Speed of the spin
+          this.spinSpeed = p.random(0.01, 0.1); // Speed of the spin
           this.spinDirection = p.random([-1, 1]); // Direction of the spin
           this.radius = p.random(0, sphereRadius); // Random radius between 0 and sphereRadius
         }

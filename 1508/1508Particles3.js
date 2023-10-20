@@ -2,13 +2,13 @@ const sketch = new p5((p) => {
   let width = p.windowWidth; // Get window width
   let height = p.windowHeight; // Get window height
   const balls = [];
-  const sphereRadius = 60;
+  const sphereRadius = window.innerHeight/6;
   // p5 setup function
   p.setup = () => {
     const sketch = document.getElementById("sketch-container"); // replace 'sketch-container' with the ID of your parent element
     p.createCanvas(width, height).parent(sketch);
     p.noStroke();
-    for (let i = 0; i < 3000; i++) {
+    for (let i = 0; i < 1500; i++) {
       balls.push(new Ball(p));
     }
   };
@@ -29,7 +29,7 @@ const sketch = new p5((p) => {
       this.pos = p.createVector(p.random(p.width), p.random(p.height));
       const angle = p.random(p.TWO_PI); // Random angle between 0 and 2*PI
       this.vel = p5.Vector.fromAngle(angle).mult(p.random(0.3, 1)); // Create a vector from the angle
-      this.size = p.random(0.5, 5);
+      this.size = p.random(0.5, 8);
     }
 
     update() {
@@ -38,7 +38,7 @@ const sketch = new p5((p) => {
       if (distance <= sphereRadius) {
         
         this.vel = p5.Vector.fromAngle(-angle * (p.mouseY + p.mouseX)).mult(
-            p.random(0.5, 1)
+            p.random(0.8, 1.3)
         );
         this.pos.add(this.vel);
       }
