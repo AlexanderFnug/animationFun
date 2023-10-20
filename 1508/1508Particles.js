@@ -16,6 +16,7 @@ const sketch = new p5((p) => {
   // p5 draw function
   p.draw = () => {
     p.background(251, 99, 78, 1)
+    // p.background(251, 99, 78, 1)
     for (let ball of balls) {
       ball.update();
       ball.checkCollision();
