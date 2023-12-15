@@ -109,8 +109,8 @@ function animate() {
 
   // Camera orbit animation
   angle += 0.008;
-  camera.position.x = Math.cos(angle) * 2; // NOTE TO SELF try different combos of cosinus sinus and tangens
-  camera.position.y = Math.cos(-angle) * 5;
+  camera.position.x = Math.sin(angle) * 2; // NOTE TO SELF try different combos of cosinus sinus and tangens
+  camera.position.y = Math.sin(angle) * 5;
   camera.lookAt(scene.position); // Camera always looks at the center of the scene
 
   renderer.render(scene, camera);
